@@ -1,6 +1,6 @@
 # Group BFT
 
-## QuiHotStuffck Start
+## Quick Start
 
 Directly executing a binary will start a committee composed of a single node using localhost TCP for communication.
 
