@@ -92,6 +92,7 @@ pub(crate) enum Commands {
         /// Number of nodes.
         #[arg(short, long, default_value_t = 4)]
         number: usize,
+        /// Number of nodes per group.
         #[arg(short, long, default_value_t = 1)]
         per_number: usize,
 
