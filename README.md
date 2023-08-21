@@ -21,10 +21,10 @@ Please lookup the document of config-gen before using it.
 **Remember that, default `config-gen` will run in dry-run mode, in which all the files will be print to the console.
 By specify `-w` you can flush these files to disks.**
 
-Let's say we want to distribute 4 replicas over 2 hosts (IP_OF_SERVER_1, IP_OF_SERVER_2).
+Let's say we want to distribute 4 replicas over 2 hosts (IP_OF_SERVER_1, IP_OF_SERVER_2) in groups of 7 replicas..
 
 ```Bash
-cargo r -- config-gen --number 4 IP_OF_SERVER_1 IP_OF_SERVER_2 --export-dir configs -w
+cargo r -- config-gen -n 49 -p 7 IP_OF_SERVER_1 IP_OF_SERVER_2 --export-dir configs -w
 ```
 
 Then, distribute these files to corresponding servers.
