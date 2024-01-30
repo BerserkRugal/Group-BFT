@@ -1,5 +1,29 @@
 # Group BFT
 
+## Running in release mode (the performance in release mode is more than 10 times higher than in debug mode)
+
+```Bash
+cargo build --release
+```
+Find GBFT under target/release, run
+```Bash
+./GBFT -h
+```
+as well as
+```Bash
+./GBFT config-gen --help
+```
+to view parameter definitions.
+
+The subcommand `config-gen` provide a way to generate multiple files for multi replicas over multi hosts.
+It also helps to generate a bunch of bash scripts to distribute files in accordance, run all the nodes, and
+collect the results.
+
+Please lookup the document of config-gen before using it.
+
+**Remember that, default `config-gen` will run in dry-run mode, in which all the files will be print to the console.
+By specify `-w` you can flush these files to disks.**
+
 ## Quick Start
 
 Directly executing a binary will start a committee composed of a single node using localhost TCP for communication.
